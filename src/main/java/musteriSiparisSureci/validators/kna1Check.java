@@ -12,8 +12,8 @@ public class kna1Check extends SimpleValidator {
 	}
 	
 	public void checkPSTLZ(int PSTLZ) throws InvalidException {
-		if (PSTLZ < 0) {
-			throw new InvalidException("KUNNR ID:" + kna1.getKUNNR() + " postal code cannot be less than 0");
+		if (PSTLZ < 1000) {
+			throw new InvalidException("KUNNR ID:" + kna1.getKUNNR() + " postal code cannot be less than 1000");
 		}
 	}
 	

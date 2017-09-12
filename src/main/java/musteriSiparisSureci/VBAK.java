@@ -1,5 +1,7 @@
 package musteriSiparisSureci;
 
+import musteriSiparisSureci.validators.InvalidException;
+import musteriSiparisSureci.validators.vbakCheck;
 
 public class VBAK extends VBase {
 	private String BSTNK; // Customer purchase order number (20)
@@ -7,13 +9,21 @@ public class VBAK extends VBase {
 	private String ERZET; // Entry time (6)
 	private String ERNAM; // Name of Person who Created the Object (12)
 	
-	public VBAK(String VBELN, String KUNNR, String BSTNK, String ERDAT, String ERZET, String ERNAM) {
+	private vbakCheck vbakCheck = new vbakCheck(this);
+	
+	public VBAK() {
+		
+	}
+	
+	public VBAK(String VBELN, String KUNNR, String BSTNK, String ERDAT, String ERZET, String ERNAM) throws InvalidException {
 		this.setVBELN(VBELN);
 		this.setKUNNR(KUNNR);
 		this.setBSTNK(BSTNK);
 		this.setERDAT(ERDAT);
 		this.setERZET(ERZET);
 		this.setERNAM(ERNAM);
+		
+		vbakCheck.checkAll(this);
 	}
 	
 	public String getBSTNK() {
