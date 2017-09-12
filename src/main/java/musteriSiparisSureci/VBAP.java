@@ -1,15 +1,24 @@
 package musteriSiparisSureci;
 
+import musteriSiparisSureci.validators.InvalidException;
+import musteriSiparisSureci.validators.VbapCheck;
+
 public class VBAP extends VBase {
 
 	private String POSNR; // Sales Document Item (6)
 	private String MEINS; // Base Unit of Measure (3)
 	private String MATNR; // Material Number (18)
-	private Double NETPR; // Net price (11(2))
+	private Double NETPR = 0.0; // Net price (11(2))
 	private String KPEIN; // Condition pricing unit (5)
 	private String PSTYV; // Sales document item category (4)
 	
-	public VBAP(String VBELN, String POSNR, String MEINS, String MATNR, Double NETPR, String KPEIN, String PSTYV) {
+	private VbapCheck vbapCheck = new VbapCheck(this);
+	
+	public VBAP() {
+		
+	}
+	
+	public VBAP(String VBELN, String POSNR, String MEINS, String MATNR, Double NETPR, String KPEIN, String PSTYV) throws InvalidException {
 		this.setVBELN(VBELN);
 		this.setPOSNR(POSNR);
 		this.setMEINS(MEINS);
@@ -17,6 +26,8 @@ public class VBAP extends VBase {
 		this.setNETPR(NETPR);
 		this.setKPEIN(KPEIN);
 		this.setPSTYV(PSTYV);
+		
+		vbapCheck.checkAll(this);
 	}
 
 	public String getPOSNR() {

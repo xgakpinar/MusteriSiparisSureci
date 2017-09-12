@@ -11,7 +11,7 @@ public class VbakCheck extends SimpleValidator {
 	}
 	
 	public void checkBSTNK(String BSTNK) throws InvalidException {
-		// KUNNR check method
+		// BSTNK check method
 		if (BSTNK == null) {
 			// If name equal null
 			// Invalid Exception execute and message print
