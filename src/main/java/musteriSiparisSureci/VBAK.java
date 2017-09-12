@@ -1,7 +1,7 @@
 package musteriSiparisSureci;
 
 import musteriSiparisSureci.validators.InvalidException;
-import musteriSiparisSureci.validators.vbakCheck;
+import musteriSiparisSureci.validators.VbakCheck;
 
 public class VBAK extends VBase {
 	private String BSTNK; // Customer purchase order number (20)
@@ -9,7 +9,7 @@ public class VBAK extends VBase {
 	private String ERZET; // Entry time (6)
 	private String ERNAM; // Name of Person who Created the Object (12)
 	
-	private vbakCheck vbakCheck = new vbakCheck(this);
+	private VbakCheck vbakCheck = new VbakCheck(this);
 	
 	public VBAK() {
 		

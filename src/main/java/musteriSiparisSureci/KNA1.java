@@ -1,7 +1,7 @@
 package musteriSiparisSureci;
 
 import musteriSiparisSureci.validators.InvalidException;
-import musteriSiparisSureci.validators.kna1Check;
+import musteriSiparisSureci.validators.Kna1Check;
 
 public class KNA1 extends VBase {
 
@@ -11,7 +11,7 @@ public class KNA1 extends VBase {
 	private String TELF1; // First telephone number (16)
 	
 	// Get instance from coach check
-	private kna1Check kna1check = new kna1Check(this);
+	private Kna1Check kna1check = new Kna1Check(this);
 
 	public KNA1() {
 

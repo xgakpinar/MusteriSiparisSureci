@@ -2,11 +2,11 @@ package musteriSiparisSureci.validators;
 
 import musteriSiparisSureci.VBAK;
 
-public class vbakCheck extends SimpleValidator {
+public class VbakCheck extends SimpleValidator {
 
 	private VBAK vbak;
 	
-	public vbakCheck(VBAK vbak) {
+	public VbakCheck(VBAK vbak) {
 		this.vbak = vbak;
 	}
 	

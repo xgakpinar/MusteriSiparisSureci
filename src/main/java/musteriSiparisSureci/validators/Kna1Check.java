@@ -2,12 +2,12 @@ package musteriSiparisSureci.validators;
 
 import musteriSiparisSureci.KNA1;
 
-public class kna1Check extends SimpleValidator {
+public class Kna1Check extends SimpleValidator {
 
 	private KNA1 kna1;
 	
 	// Constructor include coach class object parameter
-	public kna1Check(KNA1 kna1) {
+	public Kna1Check(KNA1 kna1) {
 		this.kna1 = kna1;
 	}
 	
