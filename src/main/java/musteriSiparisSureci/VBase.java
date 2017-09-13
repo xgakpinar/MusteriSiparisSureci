@@ -1,6 +1,15 @@
 package musteriSiparisSureci;
 
 public class VBase {
+	
+	// Böyle bir class a gerek yok. 
+	// Bunu yapman gereksiz iş yükü getirir.
+	
+	// SalesOrder tipine benzer farklı bir yapımız olsaydı örneğin Satın alma siparişi gibi
+	// ancak o zaman bu tarz bir yapıya girilebilirdi. Ancak o da çok gerekli değil.
+	
+	// Tamamen farklı alt yapılarla çalışması gereken bir yapı zaten. Burada böyle bir inheritance nesnesine gerek yok.
+	
 	private String VBELN; // Sales Document (10)
 	private String KUNNR; // Customer number (10)
 	
