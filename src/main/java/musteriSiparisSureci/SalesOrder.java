@@ -4,6 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SalesOrder extends VBase{
+	
+	// Sipariş - müşteri ilişkisi DB tablolarında böyle tutuluyor 
+	// Ancak bir nesne üzerinde çalışırken, sipariş nesnesi müşteri nesnesini içermeli
+	// Yani kna1 class ı VBAK class ı içersinde tanımlanmalı.
+	
+	// Ayrıca VBAK demek zaten SalesOrder demek
+	// Hem VBAK hem SalesOrder diye iki farklı class'ın olması süreçsel bir yanlış olur
+	
+	// Ya sadece VBAK olmalı ya da sadece SalesOrder olmalı sana almanca tablo kısaltmalarını kullanma demiştim :))
+	// İsimler kafanı karıştırmış normal olarak. Unutma "Keep It Simple Stupid" (KISS) :)
+
+	
 	private List<KNA1> kna1;
 	private List<VBAK> vbak;
 	private List<VBAP> vbap;
