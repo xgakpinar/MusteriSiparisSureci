@@ -27,6 +27,10 @@ public class VbapCheck extends SimpleValidator {
 	
 	@Override
 	public void checkAll(Object object) throws InvalidException {
+		// Burada önce super.checkAll() çağırılmalı
+		// Çünkü öncelikle root objedeki kontroller yapılmalı
+		// O kontrollerden geçerse bu class'a ait kontrollere girmeli
+		
 		VBAP vbap = (VBAP) object;
 		checkVBELN(vbap.getVBELN());
 		checkNETPR(vbap.getNETPR());
